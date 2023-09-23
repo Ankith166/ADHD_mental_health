@@ -144,18 +144,7 @@ def send_obj_to_server():
     response_data = {"status": 0}
 
 
-data_dict = {}
-for document in mongo.db.output_collection.find():
-    username = document['username']
-    prediction = document['prediction']
 
-    # Check if the username already exists in the dictionary
-    if username in data_dict:
-        data_dict[username].append(prediction)
-    else:
-        data_dict[username] = [prediction]
-
-print(data_dict)
 # Define a function to create and save the plot
 # Create an empty dictionary to store the data
 
@@ -206,6 +195,17 @@ def create_and_save_plot(values, username):
 @app.route("/profile/<username>")
 def profile(username):
     print("Hi")
+    data_dict = {}
+    for document in mongo.db.output_collection.find():
+        username = document['username']
+        prediction = document['prediction']
+
+    # Check if the username already exists in the dictionary
+        if username in data_dict:
+            data_dict[username].append(prediction)
+        else:
+            data_dict[username] = [prediction]
+
     print(data_dict)
     if username in data_dict:
         values = data_dict[username]
