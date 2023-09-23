@@ -1,0 +1,46 @@
+.rihide {
+    display: none;
+  }
+  
+  .riactivity img
+  {
+    cursor:pointer;
+    width:100%
+  }
+  
+  .ricorrect {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    width: 100%
+  }
+  
+  .riincorrect {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    width: 100%
+  }
+  
+  .riitem {
+    position: relative;
+    padding: .75rem 1.25rem;
+    margin: 1rem;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #111;
+    background-color: #efefef;
+    border-color: #dfdfdf;
+    width: 100%
+  }
+  

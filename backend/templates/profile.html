@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Profile</title>
+    <!-- Add any CSS links or stylesheets here -->
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      th,
+      td {
+        border: 1px solid #ddd;
+        text-align: left;
+        padding: 8px;
+      }
+
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h1>Welcome {{ username }}</h1>
+          <h2>Your ADHD Assessments:</h2>
+          <ul>
+            {% for index, prediction in indexed_values %}
+            <li>Prediction {{ index + 1 }}: {{ prediction }}</li>
+            {% endfor %}
+          </ul>
+          <img
+            src="{{ url_for('static', filename=image_url) }}"
+            alt="Line Graph"
+          />
+
+          <hr />
+
+          <h2>Psychologist Clinics in {{user_place}}:</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Clinic</th>
+                <th>Rating</th>
+                <th>Contact and Address</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for info in clinic_and_rating_info %}
+              <tr>
+                <td>{{ info['clinic'] }}</td>
+                <td>{{ info['rating'] }}</td>
+                <td>{{ info['Contact and address']}}</td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!-- Add any additional HTML content or scripts here -->
+  </body>
+</html>

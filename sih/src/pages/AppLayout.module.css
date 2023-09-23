@@ -1,0 +1,12 @@
+.app {
+  height: 100vh;
+  padding: 2.4rem;
+  overscroll-behavior-y: none;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  gap: 50px;
+  background-color: rgba(236, 237, 232, 0.8);
+  /* background-image: url("); */
+  background-size: cover;
+}
