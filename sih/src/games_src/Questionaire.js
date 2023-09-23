@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./Question.css";
 import option1 from "./option1.jpg";
 import option2 from "./option2.jpg";
-import audioFile1 from "./dumbo.wav";
+import audioFile1 from "./dumbo.mp3";
 const questions = [
   {
     question:
@@ -21,7 +21,7 @@ export default function Questionaire({ setstart }) {
     return (
       <div>
         <audio controls autoPlay>
-          <source src={audioFile1} type="audio/wav" />
+          <source src={audioFile1} type="audio/mp3" />
           Your browser does not support the audio element.
         </audio>
       </div>
