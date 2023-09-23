@@ -13,8 +13,7 @@ def scrape_clinic_and_rating(city):
     # Initialize the Chrome WebDriver (same as your existing code)
     # https://drive.google.com/file/d/1zpS0-hQyD4ZvUeHEcLpiZBZdcspm_-7z/view?usp=sharing
     # webdriver_service = ChromeService(executable_path="C:/Users/K B Chowdhury/Downloads/chromedriver-win64/chromedriver-win64/chromedriver.exe")
-    webdriver_service = ChromeService(
-        executable_path="C:/test/chromedriver.exe")
+    webdriver_service = ChromeService(executable_path="../chromedriver.exe")
 
     driver = webdriver.Chrome(
         service=webdriver_service, options=chrome_options)
